@@ -8,6 +8,8 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\LocaleController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProdutoController;
+use App\Http\Controllers\SiteController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -19,6 +21,11 @@ use App\Http\Controllers\ProdutoController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+
+Route::resource('produtos', SiteController::class);
+
+Route::get('/produtos/{categorie}', [SiteController::class,'filter'])->name('filter');
 
 Route::middleware('locale')->group(function () {
 

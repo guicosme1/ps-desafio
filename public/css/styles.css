@@ -1,0 +1,647 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+:root {
+    --cor-background: linear-gradient(-70deg, rgb(29, 29, 29), rgb(17, 17, 17));
+    --cor-background2: linear-gradient(70deg, rgb(41, 41, 41), rgb(26, 26, 26));
+    --cor-navbar: linear-gradient(90deg, rgba(204, 0, 0, 0.849) 20%, rgb(155, 0, 0));
+    --cor-destaque: rgb(226, 226, 226);
+    --cor-sombra: rgb(167, 42, 42);
+    --cor-botoes: rgb(167, 47, 47);
+    --cor-footer: rgb(214, 55, 55);
+}
+
+ul { 
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+}
+
+header {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background-image: var(--cor-navbar);
+    backdrop-filter: blur(5px);
+    color: black;
+    box-shadow: 0px 0px 5px var(--cor-sombra);
+}
+
+.row {
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    padding-bottom: 100px;
+    position: relative;
+    background-image: var(--cor-background);
+    color: var(--cor-destaque);
+}
+
+h4 {
+    text-align: center;
+}
+
+.navbar0 {
+    display: flex;
+    justify-content: space-between;
+}
+
+#navbar {
+    justify-content: space-between;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    width: 180px;
+}
+
+.fas.fa-video {
+    color: white;
+    transform: scale(1);
+    transition: .2s all ease-in-out;
+}
+
+.nav-link {
+    font-weight: bold;
+    margin: 25px;
+    font-size: 30px;
+    color: white;
+}
+
+.nav-add {
+    font-size: 20px;
+    color: rgb(0, 0, 0);
+    transition: .2s all ease-in-out;
+}
+
+.button-add {
+    text-align: center;
+    cursor: pointer;
+    width: 35px;
+    height: 35px;
+    margin-left: 50px;
+    transition: .2s all cubic-bezier(0.18, 0.89, 0.32, 1.28);
+    transform: scale(1);
+}
+
+.button-add:hover {
+    transform: scale(1.1);
+    transition: .2s all ease-in-out;
+}
+
+.search-button {
+    height: 43px;
+    width: 43px;
+    transform: scale(1);
+    border-radius: 3px;
+}
+
+
+.logo {
+    width: 130px;
+}
+
+.espace {
+    height: 80px;
+    transition: .2s all ease-in-out;
+}
+
+div.buscar {
+    width:fit-content;
+    display: flex;
+    padding: 10px;
+    margin-left: 15px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+input#search.form-control {
+    width: 330px; 
+    height: 45px;
+    transform: scale(1);
+    margin: 0px;
+    border-radius: 3px;
+    border: 2px;
+    border-style: solid;
+    border-color: rgb(201, 57, 57);
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.808);
+    transition: .2s all ease-in-out;
+}
+
+#navbar form-control:hover {
+    box-shadow: 0px 0px 5px var(--cor-sombra);
+}
+
+.principal {
+    display: flex;
+}
+
+.categoria {
+    max-width: 250px;
+    padding: 10px;
+    margin-left: 30px;
+    background-color: var(--cor-background2);
+    text-align: center;
+}
+
+.cat-title {
+    margin-bottom: 10px;
+    
+}
+
+.cat-box {
+    background-color: rgba(51, 51, 51, 0.13);
+    margin-bottom: 5px;
+    padding: 3px;
+    transition: .1s all ease-in-out;
+    text-align: center;
+}
+
+.cat-box:hover {
+    background-color: rgba(51, 51, 51, 0.815);
+}
+
+.cat {
+    margin-top: 10px;
+    color: white;
+    text-align: left;
+}
+
+#cards-container {
+    gap: 15px;
+    text-align: center;
+    display: flex;
+    padding: 20px;
+    padding-top: 0px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#card {
+    margin-left: 5px;
+
+}
+
+div.card1 {
+    position: relative;
+    display: inline-block;
+    width: 220px;
+    height: 440px;
+    border-radius: 3px;
+    margin: 5px;
+    background-color: rgba(78, 78, 78, 0.842);
+    box-shadow: 0px 0px 2px var(--cor-sombra);
+    transition: .2s all ease-in-out;
+}
+
+div.card1:hover {
+    background-color: rgba(78, 78, 78, 0.842);
+    box-shadow: 0px 0px 10px var(--cor-sombra);
+}
+
+
+
+
+div.card1 .info{
+    height: 90px;
+    width: 100%;
+    border-radius: 3px;
+    padding-left: 2%;
+    padding-right: 2%;
+    text-align: center;
+    color: white;
+}
+
+label {
+    font-weight: bold;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 5px;
+    left: 40px;
+}
+
+button {
+    opacity: 80%;
+    cursor: pointer;
+    color: var(--cor-botoes);
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.39);
+    width: 70px;
+    height: 30px;
+    background-color: rgb(228, 228, 228);
+    border-radius: 13px;
+    border: 0px;
+    transition: .2s all ease-in-out;
+}
+
+button:hover {
+    opacity: 100%;
+}
+
+input.input {
+    padding-left: 5px;
+    margin: 10px;
+    height: 30px;
+    width: 200px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: rgb(58, 135, 207);
+}
+
+.input-text {
+    padding: 5px;
+    height: 100px;
+    width: 200px;
+    margin: 10px;
+    border-style: solid;
+    border-radius: 8px;
+    border-color: rgb(58, 135, 207);
+    border-width: 2px;
+}
+
+h5.card-title {
+    color:rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.card-body p {
+    word-break: break-all;
+    padding: 5px;
+    text-align: left;
+    font-size: 14px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+}
+
+.preco {
+    cursor: pointer;
+    margin-top: 64px;
+    bottom: 0%;
+    background-image: linear-gradient(70deg, rgb(0, 128, 21), rgb(0, 121, 0));
+    transition: .2s all ease-in-out;
+}
+
+.preco:hover {
+    margin-top: 64px;
+    bottom: 0%;
+    background-image: linear-gradient(70deg, rgb(0, 128, 21), rgb(0, 204, 0));
+    transition: .2s all ease-in-out;
+}
+
+.preco p {
+    font-size: 20px;
+    text-align: center;
+}
+
+.card-img {
+    scale: 1;
+    width: 220px;
+    height: 220px;
+}
+
+footer {
+    padding: 5px;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--cor-footer);
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+}
+
+.fab {
+    padding: 10px;
+    font-size: 25px;
+}
+
+footer p {
+    padding-left: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+@media (max-width: 780px) {
+    .nav-link {
+        margin: 25px;
+        font-size: 25px;
+        transition: .2s all ease-in-out;
+    }
+    .nav-add {
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        transition: .2s all ease-in-out;
+    }
+    .button-add {
+        width: 30%;
+        height: 35px;
+        margin-right: 25px;
+        transition: .2s all ease-in-out;
+        transform: scale(.9);
+    }
+    .search-button {
+        height: 30px;
+        width: 30px;
+        transform: scale(0.9);
+        box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.39);
+    }
+    div.card1 {
+        height: 410px;
+        margin-bottom: 10px;
+        transition: .2s all ease-in-out;
+    }
+
+    input#search.form-control {
+        width: 200px; 
+        height: 27px;
+        transition: .2s all ease-in-out;
+    }   
+
+    .card-body .p-title {
+        font-size: 16px;
+    }
+    .card-body p {
+        font-size: 13px;
+    }
+    .buttons {
+        left: 37px;
+    }
+    button {
+        width: 63px;
+        height: 27px;
+        transition: .2s all ease-in-out;
+    }
+    button.delete {
+        width: 63px;
+        height: 27px;
+        transition: .2s all ease-in-out;
+    }
+}
+
+@media (max-width: 630px) {
+    div.card1 {
+        height: 410px;
+        margin-bottom: 10px;
+        transition: .2s all ease-in-out;
+    }
+    input#search.form-control {
+        width: 150px; 
+        height: 27px;
+        transition: .2s all ease-in-out;
+    }   
+    .card-img {
+        height: 86.5%;
+    } 
+    .card-body .p-title {
+        font-size: 15px;
+    }
+    .card-body p {
+        font-size: 11px;
+    }
+    .buttons {
+        left: 27px;
+    }
+}
+@media (max-width: 475px) {
+    #navbar {
+        padding: 0px;
+    }
+
+    .button-start {
+        padding-top: 8px;
+    }
+    .nav-link {
+        top: 50px;
+        font-size: 18px;
+        transition: .2s all ease-in-out;
+    }
+    .nav-add {
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        transition: .2s all ease-in-out;
+    }
+    .button-add {
+        width: 40%;
+        height: 35px;
+        margin-right: 25px;
+        transition: .2s all ease-in-out;
+        transform: scale(.8);
+    }
+    .button-add:hover {
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.39);
+        transform: scale(.9);
+        transition: .2s all ease-in-out;
+    }
+    div.card1 {
+        width: 166px;
+        height: 276px;
+        margin-bottom: 15px;
+        transition: .2s all ease-in-out;
+    }
+    input#search.form-control {
+        width: 270px; 
+        height: 27px;
+        transition: .2s all ease-in-out;
+    }   
+    .card-img {
+        height: 84.5%;
+    } 
+    .card-body .p-title {
+        font-size: 13px;
+    }
+    .card-body p {
+        font-size: 10px;
+    }
+    .buttons {
+        left: 22px;
+    }
+    button {
+        width: 54px;
+        height: 23px;
+        transition: .2s all ease-in-out;
+    }
+    button.delete {
+        width: 54px;
+        height: 23px;
+        transition: .2s all ease-in-out;
+    }
+}
+@media (max-width: 375px) {
+    .navbar0 {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin-right: 60px;
+    }
+    #cards-container {
+        flex-direction: column;
+    }
+    .button-start {
+        padding-top: 8px;
+    }
+    .nav-link {
+        margin: 0px;
+        margin-left: 10px;
+        top: 50px;
+        font-size: 17px;
+        transition: .2s all ease-in-out;
+    }
+    .nav-add {
+        font-size: 20px;
+        color: rgb(0, 0, 0);
+        transition: .2s all ease-in-out;
+    }
+
+    .categoria {
+        display: none;
+    }
+
+    .space {
+        height: 120px;
+    }
+    .button-add {
+        display: none;
+        width: 50%;
+        height: 35px;
+        margin-right: 0px;
+        transition: .2s all ease-in-out;
+        transform: scale(.6);
+    }
+    div.card1 {
+        width: 240px;
+        height: 400px;
+        left: 40px;
+        margin-bottom: 10px;
+        transition: .2s all ease-in-out;
+    }
+    input#search.form-control {
+        width: 180px; 
+        height: 27px;
+        transition: .2s all ease-in-out;
+    }   
+    .card-img {
+        height: 89%;
+    } 
+    .card-body .p-title {
+        font-size: 20px;
+    }
+    .card-body p {
+        font-size: 15px;
+    }
+    .buttons {
+        left: 57px;
+    }
+    footer {
+        padding: 5px;
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-between;
+        background-color: var(--cor-footer);
+        position: absolute;
+        bottom: 0px;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    @media (max-width: 320px) {
+        .navbar0 {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            margin-right: 40px;
+        }
+        #cards-container {
+            flex-direction: column;
+            padding: 0px;
+        }
+        .button-start {
+            padding-top: 8px;
+        }
+        .nav-link {
+            margin: 0px;
+            margin-left: 10px;
+            top: 50px;
+            font-size: 17px;
+            transition: .2s all ease-in-out;
+        }
+        .nav-add {
+            font-size: 20px;
+            color: rgb(0, 0, 0);
+            transition: .2s all ease-in-out;
+        }
+    
+        .categoria {
+            display: none;
+        }
+    
+        .space {
+            height: 120px;
+        }
+
+        .button-add {
+            display: none;
+            width: 50%;
+            height: 35px;
+            margin-right: 0px;
+            transition: .2s all ease-in-out;
+            transform: scale(.6);
+        }
+        div.card1 {
+            left: 40px;
+            margin-bottom: 10px;
+            transition: .2s all ease-in-out;
+        }
+
+        .preco {
+            margin-top: 50px;
+        }
+
+        input#search.form-control {
+            width: 180px; 
+            height: 27px;
+            transition: .2s all ease-in-out;
+        }   
+        .card-img {
+            height: 89%;
+        } 
+        .card-body .p-title {
+            font-size: 20px;
+        }
+        .card-body p {
+            font-size: 15px;
+        }
+        .buttons {
+            left: 57px;
+        }
+        footer {
+            padding: 5px;
+            margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            background-color: var(--cor-footer);
+            position: absolute;
+            bottom: 0px;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
